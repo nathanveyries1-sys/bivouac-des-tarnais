@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Choisir la date — Bivouac pour les Tarnais</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body class="vote-page">
+
+<header class="topnav">
+
+    <a href="index.html" class="nav-logo">
+        <span class="logo-mark">⛰</span>
+        Bivouac pour les Tarnais
+    </a>
+
+    <nav class="nav-menu">
+        <a href="itineraire.html" class="nav-link">Itinéraire</a>
+        <a href="vote.html" class="nav-link is-active">Choisir la date</a>
+        <a href="materiel.html" class="nav-link">Matériel</a>
+    </nav>
+
+    <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+    </button>
+
+</header>
+
+
+<div class="vote-wrap">
+
+    <div class="step-card">
+
+        <span class="eyebrow">Bivouac pour les Tarnais</span>
+        <h1 class="step-title">🏕️ Lac de Berseau</h1>
+        <p class="step-sub">
+            Une seule destination, plusieurs possibilités de dates. Choisis les week-ends où tu es disponible.
+        </p>
+
+        <div class="card" style="margin-bottom:26px">
+            <h3>🥾 Parcours prévu</h3>
+            <p>
+                <b>Jour 1 :</b><br>
+                Départ du Lac d'Orédon → Lac d'Aumar → montée vers le bivouac
+                <br><br>
+                <b>Nuit :</b><br>
+                Installation du campement au Lac de Berseau, repas collectif et coucher de soleil
+                <br><br>
+                <b>Jour 2 :</b><br>
+                Réveil en montagne puis retour vers le Lac d'Orédon
+            </p>
+        </div>
+
+        <div class="field-group">
+            <label>Ton prénom</label>
+            <input type="text" id="inputPrenom" placeholder="Ex : Nathan" maxlength="30">
+        </div>
+
+        <h2 class="step-title" style="font-size:1.35rem">📅 Tes disponibilités</h2>
+        <p class="step-sub">Sélectionne tous les week-ends possibles.</p>
+
+        <div class="calendar-wrap">
+
+            <h3>Août 2026</h3>
+            <div class="dates-grid" id="datesGridAug"></div>
+
+            <h3 style="margin-top:26px">Septembre 2026</h3>
+            <div class="dates-grid" id="datesGridSep"></div>
+
+        </div>
+
+        <div class="field-group" style="margin-top:26px">
+            <label>Une remarque ?</label>
+            <textarea id="inputComment" rows="4" placeholder="Ex : préférence de date, contrainte particulière..."></textarea>
+        </div>
+
+        <div class="vote-recap" id="voteRecap"></div>
+
+        <button class="btn-send" onclick="submitVote()">✅ Envoyer mon choix</button>
+
+    </div>
+
+    <div class="step-card" id="stepSuccess" style="display:none;text-align:center;margin-top:24px">
+        <div class="card-icon" style="margin:0 auto 16px">🎉</div>
+        <h2 class="step-title">Merci pour ton vote !</h2>
+        <p id="successMsg" class="step-sub">Ton choix a bien été enregistré.</p>
+        <a href="index.html" class="btn-primary">Retour accueil</a>
+    </div>
+
+</div>
+
+
+<footer class="footer">
+    <strong>Bivouac pour les Tarnais</strong> — Choix de la date, Lac de Berseau
+</footer>
+
+<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+
+<script src="js/firebase-config.js"></script>
+<script src="js/vote.js"></script>
+<script src="js/nav.js"></script>
+
+</body>
+</html>

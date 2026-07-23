@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Résultats — Bivouac pour les Tarnais</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body class="admin-page">
+
+<header class="topnav">
+
+    <a href="index.html" class="nav-logo">
+        <span class="logo-mark">⛰</span>
+        Bivouac pour les Tarnais
+    </a>
+
+    <nav class="nav-menu">
+        <a href="index.html" class="nav-link">Accueil</a>
+        <a href="vote.html" class="nav-link">Voter</a>
+    </nav>
+
+    <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+    </button>
+
+</header>
+
+
+<main class="admin-wrap">
+
+    <section class="admin-header">
+        <span class="eyebrow" style="justify-content:center">Tableau de bord</span>
+        <h1>📊 Résultats du bivouac</h1>
+        <p id="totalVotes">Chargement...</p>
+        <br>
+        <button class="btn-primary" onclick="loadResults()">🔄 Actualiser</button>
+    </section>
+
+    <section class="winner-card" id="winnerCard" style="display:none">
+        <div class="winner-crown">🏆</div>
+        <div>
+            <div class="winner-label">Date la plus choisie</div>
+            <div class="winner-hike" id="winnerHike">Lac de Berseau</div>
+            <div class="winner-date" id="winnerDate">-</div>
+            <div class="winner-detail" id="winnerDetail">-</div>
+        </div>
+    </section>
+
+    <section class="results-grid">
+
+        <div class="result-block">
+            <h3>📅 Disponibilités du groupe</h3>
+            <div id="chartDates" class="chart-wrap"></div>
+        </div>
+
+        <div class="result-block">
+            <h3>🏕️ Parcours choisi</h3>
+            <div class="route-summary">
+                <h4>Lac de Berseau</h4>
+                <p>
+                    🥾 Jour 1 :<br>
+                    Lac d'Orédon → Lac d'Aumar → montée vers le bivouac
+                    <br><br>
+                    🌙 Nuit :<br>
+                    Installation du campement au Lac de Berseau, repas collectif et coucher de soleil
+                    <br><br>
+                    🥾 Jour 2 :<br>
+                    Réveil en montagne puis retour vers le Lac d'Orédon
+                </p>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="result-block full-width" style="margin-top:22px">
+
+        <h3>👥 Participants (<span id="participantCount">0</span>)</h3>
+
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Prénom</th>
+                        <th>Parcours</th>
+                        <th>Dates disponibles</th>
+                        <th>Commentaire</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="participantsBody">
+                    <tr><td colspan="5" class="empty-row">🏕️ Aucun vote pour l'instant</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+    </section>
+
+    <section class="danger-zone">
+        <details>
+            <summary>⚙️ Administration</summary>
+            <div style="margin-top:20px">
+                <button class="btn-danger" onclick="resetAll()">🗑️ Supprimer tous les votes</button>
+            </div>
+        </details>
+    </section>
+
+</main>
+
+
+<footer class="footer">
+    <strong>Bivouac pour les Tarnais</strong> — Organisation du bivouac, Lac de Berseau
+</footer>
+
+<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+
+<script src="js/firebase-config.js"></script>
+<script src="js/admin.js"></script>
+<script src="js/nav.js"></script>
+
+</body>
+</html>
