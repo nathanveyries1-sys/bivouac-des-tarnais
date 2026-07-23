@@ -736,6 +736,33 @@ ul { list-style: none; }
 }
 .material-note b { color: var(--teal-deep); }
 
+.warning-card {
+    background: rgba(198,91,74,0.08);
+    border: 1px solid rgba(198,91,74,0.28);
+    border-radius: var(--radius-l);
+    padding: 24px 26px;
+    font-size: 0.94rem;
+    color: var(--ink-soft);
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+}
+.warning-card .warning-icon { font-size: 1.5rem; line-height: 1; }
+.warning-card b { color: #a94734; }
+.warning-card ul { margin-top: 8px; padding-left: 18px; list-style: disc; }
+.warning-card li { margin-bottom: 4px; }
+
+.stage-tag.is-danger {
+    background: #a94734;
+    border-color: #a94734;
+    color: #fff;
+}
+.stage-tag.is-info {
+    background: var(--teal);
+    border-color: var(--teal);
+    color: #fff;
+}
+
 /* ---------------------------------------------------------
    VOTE PAGE
 --------------------------------------------------------- */
