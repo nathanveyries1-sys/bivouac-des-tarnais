@@ -475,23 +475,23 @@ function getLocalVotes(){
 const HIKES_DATA = {
 
 
-    berseau:{
+    turon:{
 
 
         name:
-        "Lac de Berseau — Réserve du Néouvielle",
+        "Turon de Néouvielle — Réserve du Néouvielle",
 
 
         description:
-        "Départ du lac d'Orédon, passage par le lac d'Aumar puis montée vers le bivouac du lac de Berseau.",
+        "Boucle depuis Le Lienz, montée par le Refuge de la Glère et les lacs d'altitude jusqu'au sommet du Turon de Néouvielle (3029 m), puis nuit en bivouac au Lac Bleu de Maniportet avant de boucler par le Lac Vert allongé et le Lac de la Mourèle.",
 
 
         distance:
-        "Environ 12 km",
+        "22 km",
 
 
         denivele:
-        "850 m D+",
+        "1536 m D+",
 
 
         duration:
