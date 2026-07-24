@@ -365,7 +365,7 @@ function showWinner(
     ).textContent =
 
 
-    "🏕️ Lac de Berseau";
+    "🏕️ Turon de Néouvielle";
 
 
 
@@ -682,7 +682,7 @@ function renderTable(
 
         <td>
 
-        Lac d'Orédon → Lac d'Aumar → Lac de Berseau
+        Le Lienz → Turon de Néouvielle → Lac Bleu
 
         </td>
 
