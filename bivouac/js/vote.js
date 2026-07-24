@@ -1,7 +1,7 @@
 // ============================================================
 // VOTE.JS
 // BIVOUAC PYRÉNÉES 2026
-// Lac d'Orédon → Lac d'Aumar → Lac de Berseau
+// Le Lienz → Turon de Néouvielle → Lac Bleu
 // ============================================================
 
 
@@ -295,7 +295,7 @@ function updateRecap(){
 
             🏔️ <strong>Parcours :</strong>
 
-            Lac d'Orédon → Lac d'Aumar → Lac de Berseau
+            Le Lienz → Turon de Néouvielle → Lac Bleu
 
         </div>
 
@@ -426,7 +426,7 @@ async function submitVote(){
 
 
         parcours:
-        "Lac d'Orédon → Lac d'Aumar → Lac de Berseau",
+        "Le Lienz → Turon de Néouvielle → Lac Bleu",
 
 
         dates:selectedDates,
